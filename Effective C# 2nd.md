@@ -1,3 +1,7 @@
+# Chapter 1: C\# Language Idioms
+
+
+
 ## 1. Use *Properties* Instead of Accessible Data Members 
 
 - is far easier to change
