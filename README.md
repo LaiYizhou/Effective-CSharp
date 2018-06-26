@@ -3,7 +3,7 @@
 
 - 是**英文版**的第二版，
 - 整理出了其中全部的50条 Specific Ways
-- 电子书PDF地址：
+- 电子书PDF地址：https://github.com/LaiYizhou/Effective-CSharp/blob/master/EBooks
 
 
 
