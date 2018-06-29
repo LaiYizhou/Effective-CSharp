@@ -2,7 +2,7 @@
 
 
 
-## 1. Use *Properties* Instead of Accessible Data Members 
+## 1. Use Properties Instead of Accessible Data Members 
 
 - is far easier to change
 - multithreaded
@@ -101,6 +101,51 @@
 
 
 ## 11. Understand the Attraction of Small Functions
+
+- Smaller and simpler functions make it easier for the JIT compiler
+
+- A smaller function is more likely to contain fewer local variables
+
+- Smaller methods are better candidates for *inlining*. 
+
+  （But remember that even small functions that are virtual or that contain try/catch blocks cannot be inlined.）
+
+
+
+# Chapter2 : Resource Management
+
+
+
+## 12. Prefer Member Initializers to Assignment Statements
+
+- Just initialize the variable when you declare it
+- move initialization into the body of a constructor
+
+
+
+## 13. Use Proper Initialization for Static Class Members
+
+- use static initializers, can catch the exceptions yourself
+- use static initializers and **static constructors** to initialize static class members    
+
+
+
+## 14. Minimize Duplicate Initialization Logic
+
+- if multiple constructors contain the same logic, factor that logic into a common constructor instead.
+- use **default parameters** （C# 4.0） to minimize the duplicated code in constructors.    
+- makes overloaded constructors more resilient
+- DO NOT invoke another common function in different constructor
+- Use *this()*  for constructor chaining : one constructor invoke another constructor
+- In general, prefer *default values* to overloaded constructors.     
+
+
+
+
+
+
+
+
 
 
 
