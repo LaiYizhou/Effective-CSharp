@@ -141,21 +141,23 @@
 
 
 
+## 15. Utilize *using* and *try*/*finally* for Resource Cleanup
+
+- if any exceptions, the *Dispose()* never happen
+- can't use the *using* statement with a variable of a type that does not support the *IDisposable* interface
+- if allocate multiple objects, can prefer to *try/finally* 
 
 
 
+## 16. Avoid Creating Unnecessary Objects
+
+- promote often-used local variables to member variables
+- Infrequently called is unnecessary
+- try to avoid creating the same objects repeatedly
+- provide a class that stores singleton objects, like *System.String* (is immutable type)
+- consider creating mutable builder classes for immutable types
 
 
 
-
-
-
-
-
-
-
-
-
-
-
+## 17. Implement the Standard Dispose Pattern
 
